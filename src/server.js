@@ -1,8 +1,11 @@
 const express = require('express')
 const dotenv = require('dotenv')
 const errorHandler = require('./middlewares/errorHandler')
+const connectDB = require('./db/db')
 
 dotenv.config()
+
+connectDB()
 
 // Routes
 const notes = require('./routes/notes')
